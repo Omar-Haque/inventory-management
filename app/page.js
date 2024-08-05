@@ -177,10 +177,10 @@ export default function Home() {
       <Stack
         bgcolor="#393433"
         padding={10}
+        borderRadius={5}
         display={""}
         justifyContent={"center"}
         alignItems={"center"}
-        borderRadius={10}
         gap={4}
         sx={{
           transform: "scale(0.6)",
@@ -227,7 +227,6 @@ export default function Home() {
               onChange={(e) => setSearch(e.target.value)}
             ></TextField>
             <Button
-              borderRadius={3}
               style={{
                 backgroundColor: "#292727",
                 minWidth: "400px",
@@ -261,6 +260,7 @@ export default function Home() {
               })
               .map(({ name, quantity }) => (
                 <Box
+                  key={name}
                   width={"100%"}
                   minHeight={"100px"}
                   display="flex"
